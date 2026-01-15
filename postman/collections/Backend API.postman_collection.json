@@ -1,0 +1,602 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+    "name": "Backend API",
+    "description": "API collection for the Duple backend - includes User authentication, Team management, and Task operations.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Register User",
+          "id": "cf177189-ba54-4ea9-b020-96352c5ec0cb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"yourpassword\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/users/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "register"
+              ]
+            },
+            "description": "Register a new user with email and password"
+          },
+          "response": []
+        },
+        {
+          "name": "Login User",
+          "id": "3de3db2f-5aad-4a36-8faa-ede8a96a343c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"yourpassword\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/users/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "login"
+              ]
+            },
+            "description": "Login with email and password, returns JWT tokens"
+          },
+          "response": []
+        }
+      ],
+      "id": "f43316f3-d395-4a88-b58b-b26b6cd315d9",
+      "description": "User authentication endpoints"
+    },
+    {
+      "name": "Teams",
+      "item": [
+        {
+          "name": "Create Team",
+          "id": "164d6247-b1c3-4c53-b9ae-f4512dd5dab3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"My Team\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/teams/create",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "teams",
+                "create"
+              ]
+            },
+            "description": "Create a new team (requires authentication)"
+          },
+          "response": []
+        },
+        {
+          "name": "Add Member",
+          "id": "61e924c9-50e1-49c0-9aad-ab638c51775c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"memberId\": \"user_id_here\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/teams/:teamId/member",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "teams",
+                ":teamId",
+                "member"
+              ],
+              "variable": [
+                {
+                  "id": "5a9187ba-8aa0-44b6-a07c-26cd9c3c0ea4",
+                  "key": "teamId",
+                  "value": "",
+                  "description": "Team ID"
+                }
+              ]
+            },
+            "description": "Add a member to the team (team creator only)"
+          },
+          "response": []
+        },
+        {
+          "name": "Remove Member",
+          "id": "79686cfc-dbf7-4c1a-813d-9a320240aaa3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/teams/:teamId/member/:memberId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "teams",
+                ":teamId",
+                "member",
+                ":memberId"
+              ],
+              "variable": [
+                {
+                  "id": "4f5a9b86-cbdb-41df-8781-4b7f30aee357",
+                  "key": "teamId",
+                  "value": "",
+                  "description": "Team ID"
+                },
+                {
+                  "id": "b8435a09-6f40-458d-9ff5-2b603890498b",
+                  "key": "memberId",
+                  "value": "",
+                  "description": "Member ID to remove"
+                }
+              ]
+            },
+            "description": "Remove a member from the team (team creator only)"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Team Members",
+          "id": "eacda3c4-7a04-4450-a3e6-a6f84ccad357",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/teams/:teamId/members",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "teams",
+                ":teamId",
+                "members"
+              ],
+              "variable": [
+                {
+                  "id": "fed7b76d-2e2b-4d77-b8cd-fbdcc07aa661",
+                  "key": "teamId",
+                  "value": "",
+                  "description": "Team ID"
+                }
+              ]
+            },
+            "description": "Get all members of a team"
+          },
+          "response": []
+        }
+      ],
+      "id": "8e276f48-56ef-49ad-9490-7760ae720680",
+      "description": "Team management endpoints"
+    },
+    {
+      "name": "Tasks",
+      "item": [
+        {
+          "name": "Create Task",
+          "id": "735465e3-dd9d-46a6-8cbe-9d68c92ba1e2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Task Title\",\n  \"description\": \"Task description\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/teams/:teamId/tasks",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "teams",
+                ":teamId",
+                "tasks"
+              ],
+              "variable": [
+                {
+                  "id": "c3a2eaaa-233b-4f9b-bd1f-0c1c18324ec2",
+                  "key": "teamId",
+                  "value": "",
+                  "description": "Team ID"
+                }
+              ]
+            },
+            "description": "Create a new task in a team"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Tasks",
+          "id": "3c3731bf-a312-46f7-a6d9-bcf04a00eacd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/teams/:teamId/tasks?page=1&limit=10&search=&assignedTo=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "teams",
+                ":teamId",
+                "tasks"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "Page number"
+                },
+                {
+                  "key": "limit",
+                  "value": "10",
+                  "description": "Items per page"
+                },
+                {
+                  "key": "search",
+                  "value": "",
+                  "description": "Search by task title"
+                },
+                {
+                  "key": "assignedTo",
+                  "value": "",
+                  "description": "Filter by assigned user ID"
+                }
+              ],
+              "variable": [
+                {
+                  "id": "8898d000-8a86-47c6-aeed-7aa71ed9e09f",
+                  "key": "teamId",
+                  "value": "",
+                  "description": "Team ID"
+                }
+              ]
+            },
+            "description": "Get tasks with pagination and filtering"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Task",
+          "id": "ecc42ceb-1cb3-49d8-b5fa-8a56c85ff956",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Updated Title\",\n  \"description\": \"Updated description\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/teams/:teamId/task/:taskId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "teams",
+                ":teamId",
+                "task",
+                ":taskId"
+              ],
+              "variable": [
+                {
+                  "id": "82329c79-01d4-4337-82f2-b0d3053cdd33",
+                  "key": "teamId",
+                  "value": "",
+                  "description": "Team ID"
+                },
+                {
+                  "id": "750ce054-d654-4a6d-8980-8f6475c6625e",
+                  "key": "taskId",
+                  "value": "",
+                  "description": "Task ID"
+                }
+              ]
+            },
+            "description": "Update task title or description"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Task",
+          "id": "54ee61ea-433a-4d48-8810-19d601fa3eb5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/teams/:teamId/task/:taskId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "teams",
+                ":teamId",
+                "task",
+                ":taskId"
+              ],
+              "variable": [
+                {
+                  "id": "641900c5-4531-4f4a-8ffc-0fbcf1ee5299",
+                  "key": "teamId",
+                  "value": "",
+                  "description": "Team ID"
+                },
+                {
+                  "id": "d6348b55-f645-4afe-b997-2c2ab6e590ce",
+                  "key": "taskId",
+                  "value": "",
+                  "description": "Task ID"
+                }
+              ]
+            },
+            "description": "Delete a task"
+          },
+          "response": []
+        },
+        {
+          "name": "Move Task Status",
+          "id": "c6d1f0af-cf6e-4ddf-8231-148c6cb59537",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"DOING\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/teams/:teamId/task/:taskId/status",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "teams",
+                ":teamId",
+                "task",
+                ":taskId",
+                "status"
+              ],
+              "variable": [
+                {
+                  "id": "d73e5d2a-1a14-4808-a4a5-de1a34d8cabf",
+                  "key": "teamId",
+                  "value": "",
+                  "description": "Team ID"
+                },
+                {
+                  "id": "366b435e-e421-4a98-b755-39f677dafa59",
+                  "key": "taskId",
+                  "value": "",
+                  "description": "Task ID"
+                }
+              ]
+            },
+            "description": "Change task status (TODO, DOING, DONE)"
+          },
+          "response": []
+        },
+        {
+          "name": "Assign Task",
+          "id": "d27131e9-2e1d-4e7b-b35a-316489bc6e58",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"memberId\": \"user_id_here\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/teams/:teamId/task/:taskId/assign",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "teams",
+                ":teamId",
+                "task",
+                ":taskId",
+                "assign"
+              ],
+              "variable": [
+                {
+                  "id": "4824058d-a2f7-4c0b-a3ad-2efd5c776c1d",
+                  "key": "teamId",
+                  "value": "",
+                  "description": "Team ID"
+                },
+                {
+                  "id": "ac60f18c-c750-41dc-9072-351c9dea345e",
+                  "key": "taskId",
+                  "value": "",
+                  "description": "Task ID"
+                }
+              ]
+            },
+            "description": "Assign a task to a team member"
+          },
+          "response": []
+        },
+        {
+          "name": "Add Comment to Task",
+          "id": "0931a5a8-800e-4ddc-8eca-71b9be706251",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"text\": \"Your comment here\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/teams/:teamId/task/:taskId/comments",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "teams",
+                ":teamId",
+                "task",
+                ":taskId",
+                "comments"
+              ],
+              "variable": [
+                {
+                  "id": "39672f5b-c7d2-4acf-a0ae-168e15def422",
+                  "key": "teamId",
+                  "value": "",
+                  "description": "Team ID"
+                },
+                {
+                  "id": "29ffc178-83d0-418d-938b-1086dd117629",
+                  "key": "taskId",
+                  "value": "",
+                  "description": "Task ID"
+                }
+              ]
+            },
+            "description": "Add a comment to a task"
+          },
+          "response": []
+        }
+      ],
+      "id": "accb637b-ff86-409e-8725-24004ba11f04",
+      "description": "Task management endpoints"
+    }
+  ],
+  "variable": [
+    {
+      "id": "1cfbdce2-759e-4648-997c-ba6b8c5cda23",
+      "key": "baseUrl",
+      "value": "http://localhost:4000",
+      "type": "string"
+    }
+  ]
+}

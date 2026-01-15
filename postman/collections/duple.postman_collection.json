@@ -1,0 +1,1418 @@
+{
+  "info": {
+    "_postman_id": "c77e94bd-9559-41a7-9337-0e2714d3cae3",
+    "name": "duple",
+    "description": "NOTE:\n\n.\n\n\"{{Server4000}}\" is a variable and its value is [http://localhost:4000/api/v1](http://localhost:4000/api/v1)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "user",
+      "item": [
+        {
+          "name": "register",
+          "id": "60f65666-c273-4a2a-8f42-e23f7056f616",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"four@gmail.com\",\n    \"password\": \"4444\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server4000}}/users/register",
+              "host": [
+                "{{Server4000}}"
+              ],
+              "path": [
+                "users",
+                "register"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "805f70b9-81ae-4421-bdeb-fe9c3e1c363c",
+              "name": "register",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"four@gmail.com\",\n    \"password\": \"4444\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Server4000}}/users/register",
+                  "host": [
+                    "{{Server4000}}"
+                  ],
+                  "path": [
+                    "users",
+                    "register"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:4000"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "304"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"130-NQPNMZvNCDUHBOKS1HlCCQX7NFA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jan 2026 19:03:58 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": 201,\n    \"data\": {\n        \"user\": {\n            \"email\": \"four@gmail.com\",\n            \"password\": \"$2b$10$HBxUVwed.L3pGfug3Z7BueTiK1WcN38J1gstH3jxxKRSWw0f8.C0y\",\n            \"_id\": \"6967e89ee64b8c316ea217f9\",\n            \"createdAt\": \"2026-01-14T19:03:58.469Z\",\n            \"updatedAt\": \"2026-01-14T19:03:58.469Z\",\n            \"__v\": 0\n        }\n    },\n    \"message\": \"User Register Successfully\",\n    \"success\": true\n}"
+            }
+          ]
+        },
+        {
+          "name": "login",
+          "id": "eb17382a-fea4-4a4c-aa1c-dd7c5cfa076e",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"one@gamil.com\",\n    \"password\": \"1111\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server4000}}/users/login",
+              "host": [
+                "{{Server4000}}"
+              ],
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "8e09ab50-a5ff-4704-ae0b-d62d8f9110cb",
+              "name": "login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"one@gamil.com\",\n    \"password\": \"1111\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Server4000}}/users/login",
+                  "host": [
+                    "{{Server4000}}"
+                  ],
+                  "path": [
+                    "users",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:4000"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "5;w=900"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "5"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "4"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "900"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjY5ZGU4N2NkNWVjMzRlNWZmZTE1YyIsImlhdCI6MTc2ODQxNzQ1MCwiZXhwIjoxNzY4NTAzODUwfQ.Tf6RBbtBsghzMmoJCgENRpUqyZC5Lb2mt2pTZdPIKqk; Path=/; HttpOnly"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTY2OWRlODdjZDVlYzM0ZTVmZmUxNWMiLCJpYXQiOjE3Njg0MTc0NTAsImV4cCI6MTc2OTI4MTQ1MH0.YbcXkTjONQ8cZ0mCX5OWNI8ZdURwF5co9nLasZ9xAnQ; Path=/; HttpOnly"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "238"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"ee-O9rgMMhu32Oi5yUOR2GlTSOem3w\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jan 2026 19:04:10 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": 200,\n    \"data\": {\n        \"loggedInUser\": {\n            \"_id\": \"69669de87cd5ec34e5ffe15c\",\n            \"email\": \"one@gamil.com\",\n            \"createdAt\": \"2026-01-13T19:32:56.555Z\",\n            \"updatedAt\": \"2026-01-14T19:04:10.805Z\",\n            \"__v\": 0\n        }\n    },\n    \"message\": \"user logged in successfully\",\n    \"success\": true\n}"
+            }
+          ]
+        }
+      ],
+      "id": "e01227d3-094c-4de8-b207-fb76ab4368a5"
+    },
+    {
+      "name": "team",
+      "item": [
+        {
+          "name": "create team",
+          "id": "cb968cce-c7ec-459c-ad30-2bc2677d567c",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\" : \"the second team\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server4000}}/teams/create",
+              "host": [
+                "{{Server4000}}"
+              ],
+              "path": [
+                "teams",
+                "create"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e1aa950b-8a50-4bba-bef7-a231a7fd8ce3",
+              "name": "create team",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\" : \"the second team\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Server4000}}/teams/create",
+                  "host": [
+                    "{{Server4000}}"
+                  ],
+                  "path": [
+                    "teams",
+                    "create"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:4000"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "306"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"132-5aFOM/ubZ0iYM0roqFylbc+Ep6Y\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jan 2026 19:04:34 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": 201,\n    \"data\": {\n        \"team\": {\n            \"title\": \"the second team\",\n            \"creator\": \"69669de87cd5ec34e5ffe15c\",\n            \"members\": [\n                \"69669de87cd5ec34e5ffe15c\"\n            ],\n            \"_id\": \"6967e8c2e64b8c316ea21800\",\n            \"createdAt\": \"2026-01-14T19:04:34.470Z\",\n            \"updatedAt\": \"2026-01-14T19:04:34.470Z\",\n            \"__v\": 0\n        }\n    },\n    \"message\": \"Team created successfully\",\n    \"success\": true\n}"
+            }
+          ]
+        },
+        {
+          "name": "add member",
+          "id": "4e802c73-a2c7-4b65-86a3-357c174ee18c",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"memberId\": \"6966a0e1a570d11ad448c65e\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/member",
+              "host": [
+                "{{Server4000}}"
+              ],
+              "path": [
+                "teams",
+                "6966ac9e5eb7d91322d9f4bd",
+                "member"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a2447809-78a7-401c-9b6e-0549237b609f",
+              "name": "add member",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"memberId\": \"6966a0e1a570d11ad448c65e\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Server4000}}/teams/6967e8c2e64b8c316ea21800/member",
+                  "host": [
+                    "{{Server4000}}"
+                  ],
+                  "path": [
+                    "teams",
+                    "6967e8c2e64b8c316ea21800",
+                    "member"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:4000"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "345"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"159-7dYEspxJgHQ9mZ7dvqjdnpE310U\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jan 2026 19:05:32 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": 200,\n    \"data\": {\n        \"team\": {\n            \"_id\": \"6967e8c2e64b8c316ea21800\",\n            \"title\": \"the second team\",\n            \"creator\": \"69669de87cd5ec34e5ffe15c\",\n            \"members\": [\n                \"69669de87cd5ec34e5ffe15c\",\n                \"6966a0e1a570d11ad448c65e\"\n            ],\n            \"createdAt\": \"2026-01-14T19:04:34.470Z\",\n            \"updatedAt\": \"2026-01-14T19:05:32.493Z\",\n            \"__v\": 1\n        }\n    },\n    \"message\": \"Member added to the team successfully\",\n    \"success\": true\n}"
+            }
+          ]
+        },
+        {
+          "name": "remove member",
+          "id": "efe35d72-4733-44ca-b577-8ef4b2dfadb3",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/member/6966a0e1a570d11ad448c65e",
+              "host": [
+                "{{Server4000}}"
+              ],
+              "path": [
+                "teams",
+                "6966ac9e5eb7d91322d9f4bd",
+                "member",
+                "6966a0e1a570d11ad448c65e"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "aed9d869-1cac-44b8-ab60-a939f696fdff",
+              "name": "remove member",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/member/6966a0e1a570d11ad448c65e",
+                  "host": [
+                    "{{Server4000}}"
+                  ],
+                  "path": [
+                    "teams",
+                    "6966ac9e5eb7d91322d9f4bd",
+                    "member",
+                    "6966a0e1a570d11ad448c65e"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:4000"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "319"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"13f-E3CdlgOTVh8snJ22ey/Jqot5Bo0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jan 2026 19:05:50 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": 200,\n    \"data\": {\n        \"team\": {\n            \"_id\": \"6966ac9e5eb7d91322d9f4bd\",\n            \"title\": \"the one team\",\n            \"creator\": \"69669de87cd5ec34e5ffe15c\",\n            \"members\": [\n                \"69669de87cd5ec34e5ffe15c\"\n            ],\n            \"createdAt\": \"2026-01-13T20:35:42.965Z\",\n            \"updatedAt\": \"2026-01-14T19:05:50.772Z\",\n            \"__v\": 5\n        }\n    },\n    \"message\": \"Member removed from the team successfully\",\n    \"success\": true\n}"
+            }
+          ]
+        },
+        {
+          "name": "fetch team",
+          "id": "9d7b0d4a-c9a0-43eb-b40b-518584b71962",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/members",
+              "host": [
+                "{{Server4000}}"
+              ],
+              "path": [
+                "teams",
+                "6966ac9e5eb7d91322d9f4bd",
+                "members"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "25f3815a-e179-42a3-aff8-b1a1829fb40b",
+              "name": "fetch team",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/members",
+                  "host": [
+                    "{{Server4000}}"
+                  ],
+                  "path": [
+                    "teams",
+                    "6966ac9e5eb7d91322d9f4bd",
+                    "members"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:4000"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "155"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"9b-6t0Pfni+svdcEYbirnmRlxvN1Ac\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jan 2026 19:06:00 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": 200,\n    \"data\": {\n        \"members\": [\n            {\n                \"_id\": \"69669de87cd5ec34e5ffe15c\",\n                \"email\": \"one@gamil.com\"\n            }\n        ]\n    },\n    \"message\": \"Team members fetched successfully\",\n    \"success\": true\n}"
+            }
+          ]
+        }
+      ],
+      "id": "be6ad532-f451-468c-b4e9-3d77e1744b03"
+    },
+    {
+      "name": "task",
+      "item": [
+        {
+          "name": "create task",
+          "id": "869b31fa-c971-4378-be05-5e0900bcb9c8",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"the fourteen one\",\n    \"description\": \"this is third task create after the deletion of the second task\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/tasks",
+              "host": [
+                "{{Server4000}}"
+              ],
+              "path": [
+                "teams",
+                "6966ac9e5eb7d91322d9f4bd",
+                "tasks"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f8a21430-c513-496a-bad1-d14d3f848b6b",
+              "name": "create task",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"title\": \"the last one\",\n    \"description\": \"this is third task create after the deletion of the second task\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/tasks",
+                  "host": [
+                    "{{Server4000}}"
+                  ],
+                  "path": [
+                    "teams",
+                    "6966ac9e5eb7d91322d9f4bd",
+                    "tasks"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:4000"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "376"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"178-opMx+GsLNGcDhD15um1erS4Klmc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jan 2026 19:06:34 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": 201,\n    \"data\": {\n        \"task\": {\n            \"teamId\": \"6966ac9e5eb7d91322d9f4bd\",\n            \"title\": \"the last one\",\n            \"description\": \"this is third task create after the deletion of the second task\",\n            \"assignedTo\": [],\n            \"status\": \"TODO\",\n            \"_id\": \"6967e939e64b8c316ea2180e\",\n            \"comments\": [],\n            \"createdAt\": \"2026-01-14T19:06:33.997Z\",\n            \"updatedAt\": \"2026-01-14T19:06:33.997Z\",\n            \"__v\": 0\n        }\n    },\n    \"message\": \"Task created\",\n    \"success\": true\n}"
+            }
+          ]
+        },
+        {
+          "name": "update",
+          "id": "bf7367df-dd0a-4a6b-b46b-88843c08f858",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"this is updated to check the redis title to check cron also\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/task/6966b7a1ba893d7a2914afc2",
+              "host": [
+                "{{Server4000}}"
+              ],
+              "path": [
+                "teams",
+                "6966ac9e5eb7d91322d9f4bd",
+                "task",
+                "6966b7a1ba893d7a2914afc2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "880612ea-cd83-410f-beb1-68d66727d87d",
+              "name": "update",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"title\": \"this is updated to check the redis title to check cron also and postman\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/task/6966b7a1ba893d7a2914afc2",
+                  "host": [
+                    "{{Server4000}}"
+                  ],
+                  "path": [
+                    "teams",
+                    "6966ac9e5eb7d91322d9f4bd",
+                    "task",
+                    "6966b7a1ba893d7a2914afc2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:4000"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "390"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"186-dq+6/Y34JFFfynZpb0v90Yfs434\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jan 2026 19:08:37 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": 200,\n    \"data\": {\n        \"task\": {\n            \"_id\": \"6966b7a1ba893d7a2914afc2\",\n            \"teamId\": \"6966ac9e5eb7d91322d9f4bd\",\n            \"title\": \"this is updated to check the redis title to check cron also and postman\",\n            \"description\": \"this is first task\",\n            \"status\": \"TODO\",\n            \"comments\": [],\n            \"createdAt\": \"2026-01-13T21:22:41.638Z\",\n            \"updatedAt\": \"2026-01-14T19:08:37.629Z\",\n            \"__v\": 1,\n            \"assignedTo\": []\n        }\n    },\n    \"message\": \"Task updated\",\n    \"success\": true\n}"
+            }
+          ]
+        },
+        {
+          "name": "delete",
+          "id": "dea3b681-ecb5-4544-b5e6-7bf823f17d6f",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"this is updated title\"\n}"
+            },
+            "url": {
+              "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/task/6966b83fba893d7a2914afca",
+              "host": [
+                "{{Server4000}}"
+              ],
+              "path": [
+                "teams",
+                "6966ac9e5eb7d91322d9f4bd",
+                "task",
+                "6966b83fba893d7a2914afca"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "d9cce956-baf9-4d71-b752-8277fc1d8c4f",
+              "name": "delete",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"title\": \"this is updated title\"\n}"
+                },
+                "url": {
+                  "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/task/6966b83fba893d7a2914afca",
+                  "host": [
+                    "{{Server4000}}"
+                  ],
+                  "path": [
+                    "teams",
+                    "6966ac9e5eb7d91322d9f4bd",
+                    "task",
+                    "6966b83fba893d7a2914afca"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:4000"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "75"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4b-ZKxBQflmrkmbhepPn2nKsxdHIgY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jan 2026 19:07:59 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": 200,\n    \"data\": {},\n    \"message\": \"Task delte successfully\",\n    \"success\": true\n}"
+            }
+          ]
+        },
+        {
+          "name": "status",
+          "id": "e0590d5c-3929-4aec-a82c-ef0ee2a754c0",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"status\":\"DONE\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/task/6966b83fba893d7a2914afca/status",
+              "host": [
+                "{{Server4000}}"
+              ],
+              "path": [
+                "teams",
+                "6966ac9e5eb7d91322d9f4bd",
+                "task",
+                "6966b83fba893d7a2914afca",
+                "status"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "8bbe613b-d13d-4e67-9532-6d4d3fd7efb0",
+              "name": "status",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"status\":\"DONE\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/task/6967e939e64b8c316ea2180e/status",
+                  "host": [
+                    "{{Server4000}}"
+                  ],
+                  "path": [
+                    "teams",
+                    "6966ac9e5eb7d91322d9f4bd",
+                    "task",
+                    "6967e939e64b8c316ea2180e",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:4000"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "387"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"183-JAA4xDZTcXMNT+qbBADDtjR9dBw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jan 2026 19:10:00 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": 200,\n    \"data\": {\n        \"task\": {\n            \"_id\": \"6967e939e64b8c316ea2180e\",\n            \"teamId\": \"6966ac9e5eb7d91322d9f4bd\",\n            \"title\": \"the last one\",\n            \"description\": \"this is third task create after the deletion of the second task\",\n            \"assignedTo\": [],\n            \"status\": \"DONE\",\n            \"comments\": [],\n            \"createdAt\": \"2026-01-14T19:06:33.997Z\",\n            \"updatedAt\": \"2026-01-14T19:10:00.413Z\",\n            \"__v\": 0\n        }\n    },\n    \"message\": \"Task moved successfully\",\n    \"success\": true\n}"
+            }
+          ]
+        },
+        {
+          "name": "assign task",
+          "id": "428115eb-7ff9-4eb3-9ede-c0a601ed997b",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"memberId\":\"6966a0e1a570d11ad448c65e\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/task/69677df90e7d72cd3c6e708d/assign",
+              "host": [
+                "{{Server4000}}"
+              ],
+              "path": [
+                "teams",
+                "6966ac9e5eb7d91322d9f4bd",
+                "task",
+                "69677df90e7d72cd3c6e708d",
+                "assign"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "086a9f3d-30ed-4df4-bbf6-11416f1b1866",
+              "name": "assign task",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"memberId\":\"6966a0e1a570d11ad448c65e\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/task/6967e939e64b8c316ea2180e/assign",
+                  "host": [
+                    "{{Server4000}}"
+                  ],
+                  "path": [
+                    "teams",
+                    "6966ac9e5eb7d91322d9f4bd",
+                    "task",
+                    "6967e939e64b8c316ea2180e",
+                    "assign"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:4000"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "416"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1a0-mD8okMOt2+GW+wr7nAulXyTdRjM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jan 2026 19:17:32 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": 200,\n    \"data\": {\n        \"task\": {\n            \"_id\": \"6967e939e64b8c316ea2180e\",\n            \"teamId\": \"6966ac9e5eb7d91322d9f4bd\",\n            \"title\": \"the last one\",\n            \"description\": \"this is third task create after the deletion of the second task\",\n            \"assignedTo\": [\n                \"6966a0e1a570d11ad448c65e\"\n            ],\n            \"status\": \"DONE\",\n            \"comments\": [],\n            \"createdAt\": \"2026-01-14T19:06:33.997Z\",\n            \"updatedAt\": \"2026-01-14T19:17:32.884Z\",\n            \"__v\": 1\n        }\n    },\n    \"message\": \"Task assigned successfully\",\n    \"success\": true\n}"
+            }
+          ]
+        },
+        {
+          "name": "comments",
+          "id": "5aebacb9-eb8a-4dbd-9e49-f8936053e19d",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"text\":\" this is my second comment form the user third\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/task/6966b83fba893d7a2914afca/comments",
+              "host": [
+                "{{Server4000}}"
+              ],
+              "path": [
+                "teams",
+                "6966ac9e5eb7d91322d9f4bd",
+                "task",
+                "6966b83fba893d7a2914afca",
+                "comments"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "4551b168-94b1-45ea-a7f6-634c360eb818",
+              "name": "comments",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"text\":\"Comment 2\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/task/6967e939e64b8c316ea2180e/comments",
+                  "host": [
+                    "{{Server4000}}"
+                  ],
+                  "path": [
+                    "teams",
+                    "6966ac9e5eb7d91322d9f4bd",
+                    "task",
+                    "6967e939e64b8c316ea2180e",
+                    "comments"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:4000"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "678"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"2a6-Crmt+runeMSY/He0Vu7xSwrjH2o\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jan 2026 19:18:51 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": 200,\n    \"data\": {\n        \"_id\": \"6967e939e64b8c316ea2180e\",\n        \"teamId\": \"6966ac9e5eb7d91322d9f4bd\",\n        \"title\": \"the last one\",\n        \"description\": \"this is third task create after the deletion of the second task\",\n        \"assignedTo\": [\n            \"6966a0e1a570d11ad448c65e\"\n        ],\n        \"status\": \"DONE\",\n        \"comments\": [\n            {\n                \"text\": \"Comment\",\n                \"createdBy\": \"69669de87cd5ec34e5ffe15c\",\n                \"_id\": \"6967ec0de64b8c316ea21855\",\n                \"createdAt\": \"2026-01-14T19:18:37.189Z\"\n            },\n            {\n                \"text\": \"Comment 2\",\n                \"createdBy\": \"69669de87cd5ec34e5ffe15c\",\n                \"_id\": \"6967ec1be64b8c316ea2185b\",\n                \"createdAt\": \"2026-01-14T19:18:51.375Z\"\n            }\n        ],\n        \"createdAt\": \"2026-01-14T19:06:33.997Z\",\n        \"updatedAt\": \"2026-01-14T19:18:51.376Z\",\n        \"__v\": 3\n    },\n    \"message\": \"Comments has been added successfully\",\n    \"success\": true\n}"
+            }
+          ]
+        },
+        {
+          "name": "get task",
+          "id": "96400a58-3ffb-4f93-970d-d58447cf2a17",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/tasks?page=1&limit=10",
+              "host": [
+                "{{Server4000}}"
+              ],
+              "path": [
+                "teams",
+                "6966ac9e5eb7d91322d9f4bd",
+                "tasks"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "7d8633df-781a-4f81-9f72-e3d1315c109e",
+              "name": "get task",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{Server4000}}/teams/6966ac9e5eb7d91322d9f4bd/tasks?page=1&limit=10",
+                  "host": [
+                    "{{Server4000}}"
+                  ],
+                  "path": [
+                    "teams",
+                    "6966ac9e5eb7d91322d9f4bd",
+                    "tasks"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "http://localhost:4000"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "3589"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"e05-M778WHE5GEaHgxpLdTDNnh/odPQ\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 14 Jan 2026 19:23:46 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": 200,\n    \"data\": {\n        \"page\": 1,\n        \"limit\": 10,\n        \"totalPages\": 2,\n        \"totalTask\": 11,\n        \"task\": [\n            {\n                \"_id\": \"6967e939e64b8c316ea2180e\",\n                \"teamId\": \"6966ac9e5eb7d91322d9f4bd\",\n                \"title\": \"the last one\",\n                \"description\": \"this is third task create after the deletion of the second task\",\n                \"assignedTo\": [\n                    {\n                        \"_id\": \"6966a0e1a570d11ad448c65e\",\n                        \"email\": \"two@gmail.com\"\n                    }\n                ],\n                \"status\": \"DONE\",\n                \"comments\": [\n                    {\n                        \"text\": \"Comment\",\n                        \"createdBy\": \"69669de87cd5ec34e5ffe15c\",\n                        \"_id\": \"6967ec0de64b8c316ea21855\",\n                        \"createdAt\": \"2026-01-14T19:18:37.189Z\"\n                    },\n                    {\n                        \"text\": \"Comment 2\",\n                        \"createdBy\": \"69669de87cd5ec34e5ffe15c\",\n                        \"_id\": \"6967ec1be64b8c316ea2185b\",\n                        \"createdAt\": \"2026-01-14T19:18:51.375Z\"\n                    }\n                ],\n                \"createdAt\": \"2026-01-14T19:06:33.997Z\",\n                \"updatedAt\": \"2026-01-14T19:18:51.376Z\",\n                \"__v\": 3\n            },\n            {\n                \"_id\": \"69677df90e7d72cd3c6e708d\",\n                \"teamId\": \"6966ac9e5eb7d91322d9f4bd\",\n                \"title\": \"the fourteen one\",\n                \"description\": \"this is third task create after the deletion of the second task\",\n                \"assignedTo\": [\n                    {\n                        \"_id\": \"6966a0e1a570d11ad448c65e\",\n                        \"email\": \"two@gmail.com\"\n                    }\n                ],\n                \"status\": \"TODO\",\n                \"comments\": [],\n                \"createdAt\": \"2026-01-14T11:28:57.331Z\",\n                \"updatedAt\": \"2026-01-14T11:32:44.423Z\",\n                \"__v\": 2\n            },\n            {\n                \"_id\": \"69677def0e7d72cd3c6e7089\",\n                \"teamId\": \"6966ac9e5eb7d91322d9f4bd\",\n                \"title\": \"the thirteen one\",\n                \"description\": \"this is third task create after the deletion of the second task\",\n                \"assignedTo\": [],\n                \"status\": \"TODO\",\n                \"comments\": [],\n                \"createdAt\": \"2026-01-14T11:28:47.534Z\",\n                \"updatedAt\": \"2026-01-14T11:28:47.534Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"69677de70e7d72cd3c6e7085\",\n                \"teamId\": \"6966ac9e5eb7d91322d9f4bd\",\n                \"title\": \"the tweleve one\",\n                \"description\": \"this is third task create after the deletion of the second task\",\n                \"assignedTo\": [],\n                \"status\": \"TODO\",\n                \"comments\": [],\n                \"createdAt\": \"2026-01-14T11:28:39.189Z\",\n                \"updatedAt\": \"2026-01-14T11:28:39.189Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"69674d068343a62d9960e5ce\",\n                \"teamId\": \"6966ac9e5eb7d91322d9f4bd\",\n                \"title\": \"the eight one\",\n                \"description\": \"this is third task create after the deletion of the second task\",\n                \"assignedTo\": [],\n                \"status\": \"TODO\",\n                \"comments\": [],\n                \"createdAt\": \"2026-01-14T08:00:06.044Z\",\n                \"updatedAt\": \"2026-01-14T08:00:06.044Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"69673d7f50a4c9c160157046\",\n                \"teamId\": \"6966ac9e5eb7d91322d9f4bd\",\n                \"title\": \"the seven one\",\n                \"description\": \"this is third task create after the deletion of the second task\",\n                \"assignedTo\": [],\n                \"status\": \"TODO\",\n                \"comments\": [],\n                \"createdAt\": \"2026-01-14T06:53:51.224Z\",\n                \"updatedAt\": \"2026-01-14T06:53:51.224Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"69673c5050a4c9c160157028\",\n                \"teamId\": \"6966ac9e5eb7d91322d9f4bd\",\n                \"title\": \"the sixth one\",\n                \"description\": \"this is third task create after the deletion of the second task\",\n                \"assignedTo\": [],\n                \"status\": \"TODO\",\n                \"comments\": [],\n                \"createdAt\": \"2026-01-14T06:48:48.085Z\",\n                \"updatedAt\": \"2026-01-14T06:48:48.085Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"69673c4950a4c9c160157024\",\n                \"teamId\": \"6966ac9e5eb7d91322d9f4bd\",\n                \"title\": \"the fivth one\",\n                \"description\": \"this is third task create after the deletion of the second task\",\n                \"assignedTo\": [],\n                \"status\": \"TODO\",\n                \"comments\": [],\n                \"createdAt\": \"2026-01-14T06:48:41.644Z\",\n                \"updatedAt\": \"2026-01-14T06:48:41.644Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"69673c4150a4c9c160157020\",\n                \"teamId\": \"6966ac9e5eb7d91322d9f4bd\",\n                \"title\": \"the fouth one\",\n                \"description\": \"this is third task create after the deletion of the second task\",\n                \"assignedTo\": [],\n                \"status\": \"TODO\",\n                \"comments\": [],\n                \"createdAt\": \"2026-01-14T06:48:33.433Z\",\n                \"updatedAt\": \"2026-01-14T06:48:33.433Z\",\n                \"__v\": 0\n            },\n            {\n                \"assignedTo\": [],\n                \"_id\": \"6966b8abba893d7a2914afd2\",\n                \"teamId\": \"6966ac9e5eb7d91322d9f4bd\",\n                \"title\": \"the third one\",\n                \"description\": \"this is third task create after the deletion of the second task\",\n                \"status\": \"TODO\",\n                \"comments\": [],\n                \"createdAt\": \"2026-01-13T21:27:07.675Z\",\n                \"updatedAt\": \"2026-01-13T21:27:07.675Z\",\n                \"__v\": 0\n            }\n        ]\n    },\n    \"message\": \"Data fetched Successfully\",\n    \"success\": true\n}"
+            }
+          ]
+        }
+      ],
+      "id": "1a03ab35-405e-4254-bcab-9af1c9ae2760"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "04435962-3adf-4d86-a460-1e7aa11f70a6",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "2efa3c66-7ea3-4cd9-b65b-3212230c6dae",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "128e7510-80fd-43ad-883b-658ba5157efa",
+      "key": "Server4000",
+      "value": ""
+    }
+  ]
+}
