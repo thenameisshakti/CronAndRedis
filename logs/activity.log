@@ -1,0 +1,9 @@
+[2026-01-14T19:06:34.090Z] TASK_CREATED | team: 6966ac9e5eb7d91322d9f4bd | task : 6967e939e64b8c316ea2180e | By: 69669de87cd5ec34e5ffe15c | meta = {} 
+[2026-01-14T19:06:46.874Z] TASK_UPDATE | team: 6966ac9e5eb7d91322d9f4bd | task : 6966b7a1ba893d7a2914afc2 | By: 69669de87cd5ec34e5ffe15c | meta = {} 
+[2026-01-14T19:07:10.964Z] TASK_UPDATE | team: 6966ac9e5eb7d91322d9f4bd | task : 6966b83fba893d7a2914afca | By: 69669de87cd5ec34e5ffe15c | meta = {} 
+[2026-01-14T19:08:17.905Z] TASK_UPDATE | team: 6966ac9e5eb7d91322d9f4bd | task : 6966b7a1ba893d7a2914afc2 | By: 69669de87cd5ec34e5ffe15c | meta = {} 
+[2026-01-14T19:08:37.701Z] TASK_UPDATE | team: 6966ac9e5eb7d91322d9f4bd | task : 6966b7a1ba893d7a2914afc2 | By: 69669de87cd5ec34e5ffe15c | meta = {} 
+[2026-01-14T19:08:51.981Z] TASK_UPDATE | team: 6966ac9e5eb7d91322d9f4bd | task : 6966b7a1ba893d7a2914afc2 | By: 69669de87cd5ec34e5ffe15c | meta = {} 
+[2026-01-14T19:08:54.856Z] TASK_UPDATE | team: 6966ac9e5eb7d91322d9f4bd | task : 6966b7a1ba893d7a2914afc2 | By: 69669de87cd5ec34e5ffe15c | meta = {} 
+[2026-01-14T19:10:00.469Z] TASK_MOVED | team: 6966ac9e5eb7d91322d9f4bd | task : 6967e939e64b8c316ea2180e | By: 69669de87cd5ec34e5ffe15c | meta = {"from":"TODO","to":"DONE"} 
+[2026-01-14T19:17:32.943Z] TASK_ASSIGNED | team: 6966ac9e5eb7d91322d9f4bd | task : 6967e939e64b8c316ea2180e | By: 69669de87cd5ec34e5ffe15c | meta = {"assignedTo":"6966a0e1a570d11ad448c65e"} 
